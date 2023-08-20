@@ -35,98 +35,42 @@
 </div>
 </div> 
 
-<!-------single products details--------->
-<div class="small-container single-product">
-    <div class="row">
-        <div class="col-2">
-            <img src="images/gallery-1.jpg" width="100%" id="Productimg">
-        </div>
-        <div class="col-2">
-            <p>Home / T-Shirt </p>
-            <h1>Red Printd T-Shirt by HRX</h1>
-            <h4>$50.00</h4>
-            <select>
-                <option>Select Size</option>
-                <option>XXL</option>
-                <option>XL</option>
-                <option>L</option>
-                <option>M</option>
-                <option>S</option>
-            </select>
-            <input type="number" value="1">
-            <a href="" class="btn">Add to Cart</a>
-            <h3>Products Details </i></h3>
-            <br>
-            <p>Simple is more.
-                ความเรียบง่ายที่ไม่ธรรมดา
-                คอลเลคชันเสื้อยืดคุณภาพ ที่ให้คุณแสดงตัวตนได้อย่างอิสระ
-                มีหลากหลายทรง และสีสันให้คุณได้เลือกสวมใส่ได้ในหลายโอกาส</p>
+
+<!-------account-page-------->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id ="indicator">
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!----title----->
-<div class="small-container">
-    <div class="row row-2">
-        <h2>Related Products</h2>
-        <p>View More</p>
-    </div>
-</div>
 
-<!----Products----->
-<div class="small-container">
-    <div class="row">
-        <div class="col-4">
-            <img src="images/product-9.jpg">
-            <h4>Red Printer T-Shirt</h4>
-            <div class="rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star" ></i>
-            </div>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-10.jpg">
-            <h4>NEW SHOE</h4>
-            <div class="rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star" ></i>
-            </div>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-11.jpg">
-            <h4>NEW JEAN</h4>
-            <div class="rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star" ></i>
-            </div>
-            <p>$50.00</p>
-        </div>
-        <div class="col-4">
-            <img src="images/product-12.jpg">
-            <h4>Blue T-Shirt</h4>
-            <div class="rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-            </div>
-            <p>$50.00</p>
-        </div>
-    </div>
-    
-</div>
 <!------footer------>
 <div class="footer">
     <div class="container">
@@ -183,6 +127,39 @@
             }
         }
 </script>
+
+<!-------Js for toggle Form-------->
+
+
+<script>
+
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var indicator = document.getElementById("indicator");
+
+        function register(){
+
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform ="translateX(0px)";
+            indicator.style.transform ="translateX(100px)";
+
+        }
+        function login(){
+
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform ="translateX(300px)";
+            indicator.style.transform ="translateX(0px)";
+
+        }
+
+</script>
+
+
+
+
+
+
+
 
 </body>
 </html>
